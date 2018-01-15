@@ -40,8 +40,8 @@ function get_entity_manager($kernel = null)
 	{
 		foreach ($settings['modules'] as $module)
 		{
-			$m_path = $modules_path . '/' . $module . '/doctrine';
-			$v_path = $vendor_path . '/' . $module . '/doctrine';
+			$m_path = $modules_path . '/' . $module . '/sql';
+			$v_path = $vendor_path . '/' . $module . '/sql';
 			if (is_dir($m_path))
 			{
 				$directories[] = $m_path;
@@ -68,7 +68,7 @@ function get_entity_manager($kernel = null)
 		}
 		if ($module_file)
 		{
-			$module_doctrine_path = dirname($modules_path . '/' . $module_file) . '/doctrine';
+			$module_doctrine_path = dirname($modules_path . '/' . $module_file) . '/sql';
 			if (is_dir($module_doctrine_path))
 			{
 				$directories[] = $module_doctrine_path;
