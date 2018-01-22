@@ -1,6 +1,6 @@
 <?php
 
-function get_entity_manager($kernel = null)
+function get_entity_manager()
 {
 	static $entity_manager = null;
 
@@ -10,7 +10,7 @@ function get_entity_manager($kernel = null)
 		return $entity_manager;
 	}
 
-	$kernel = $kernel ? $kernel : kernel::getInstance();
+	$kernel = kernel::getInstance();
 
 	/* get doctrine settings */
 	$settings = $kernel->getConfigValue('doctrine', 'sql');
@@ -123,7 +123,7 @@ function get_entity_manager($kernel = null)
 	return $entity_manager;
 }
 
-function get_document_manager($kernel = null)
+function get_document_manager()
 {
 	static $document_manager = null;
 
@@ -133,7 +133,7 @@ function get_document_manager($kernel = null)
 		return $document_manager;
 	}
 
-	$kernel = $kernel ? $kernel : kernel::getInstance();
+	$kernel = kernel::getInstance();
 
 	/* get doctrine settings */
 	$settings = $kernel->getConfigValue('doctrine', 'mongodb');
