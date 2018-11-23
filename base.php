@@ -1,6 +1,6 @@
 <?php
 
-function get_entity_manager()
+function em()
 {
     static $entity_manager = false;
 
@@ -101,7 +101,13 @@ function get_entity_manager()
     return $entity_manager;
 }
 
-function get_document_manager()
+function get_entity_manager()
+{
+    \kernel::log(LOG_WARNING, 'get_entity_manager() is deprecated, use em()');
+    return em();
+}
+
+function dm()
 {
     static $document_manager = false;
 
