@@ -8,7 +8,7 @@
   }],
   "require": {
     "php": ">=7.0.0",
-    "doctrine-orm": "^2.0.0"
+    "doctrine/orm": "^2.0.0"
   },
   "autoload": {
     "files": ["base.php"],
