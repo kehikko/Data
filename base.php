@@ -19,8 +19,8 @@ function em()
         return null;
     }
 
-    /* find doctrine definition paths from modules/vendor only */
-    $paths = tool_system_find_files(['sql'], [cfg(['path', 'vendor']), cfg(['path', 'modules'])], 2, true);
+    /* find doctrine definition paths from models/vendor only */
+    $paths = tool_system_find_files(['sql'], [cfg(['path', 'vendor']), cfg(['path', 'models'])], 2, true);
 
     /* setup doctrine and return entity manager */
     $config = Doctrine\ORM\Tools\Setup::createYAMLMetadataConfiguration($paths, cfg_debug());
